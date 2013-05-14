@@ -114,6 +114,8 @@ class ResultSet(object):
         if self._last_key_seen is None:
             self._results_left = False
 
+        self._results_left = False
+
         # Decrease the limit, if it's present.
         if self.call_kwargs.get('limit'):
             self.call_kwargs['limit'] -= len(results['results'])
